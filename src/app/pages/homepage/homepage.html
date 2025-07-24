@@ -1,1 +1,47 @@
-<p>homepage works!</p>
+<div class="min-h-screen bg-gray-100 pb-16">
+    <!-- Hero Section -->
+    <div class="relative h-96 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="w-full h-full bg-[url('/harvard-university-cambridge-usa.jpg')] bg-cover bg-center blur-xs">
+            </div>
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div class="text-white z-10 w-[70%] flex flex-col items-center gap-4">
+            <div class="text-center">
+                <h5 class="font-light">Step in making history together,</h5>
+                <h1 class="text-5xl font-bold mb-2">Welcome to ALCOSY</h1>
+                <h3 class="font-light mb-2">Let the Opportunities run within your vicinity.</h3>
+                <h4 class="font-light text-sm max-w-2xl">
+                    Connections don't end at graduation — they grow stronger with time. Together, we are a legacy in
+                    motion, The journey continues — united beyond campus walls. Reconnecting minds, reigniting memories, redefining the future.
+                </h4>
+            </div>
+            <button class="hover:bg-green-600 flex gap-1 cursor-pointer bg-green-800 text-white px-6 py-3 rounded-md font-semibold transition-colors duration-200 mt-4">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+  <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+</svg>
+
+            </button>
+        </div>
+    </div>
+
+<div class="container mx-auto px-4 py-8">
+        <!-- Cards Section -->
+    <div class="container mx-auto px-4 py-12 mt-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <app-card 
+                title="Connect with Alumni" 
+                content="Network with fellow graduates, share experiences, and build lasting professional relationships.">
+            </app-card>
+            <app-card 
+                title="Upcoming Events" 
+                content="Stay updated with alumni gatherings, workshops, and networking opportunities in your area.">
+            </app-card>
+            <app-card 
+                title="Career Resources" 
+                content="Access exclusive job postings, mentorship programs, and professional development resources.">
+            </app-card>
+        </div>
+    </div>
+</div>

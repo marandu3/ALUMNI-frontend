@@ -1,0 +1,34 @@
+/* Mobile menu animation */
+.mobile-menu {
+  transition: all 0.3s ease-in-out;
+  transform-origin: top;
+}
+
+.mobile-menu.hidden {
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+/* Active link styles */
+.active-link {
+  @apply text-green-600 font-semibold;
+}
+
+/* Smooth transitions for all interactive elements */
+a, button {
+  @apply transition-all duration-200;
+}
+
+/* Container for main content */
+.content-container {
+  @apply container mx-auto px-4 py-8;
+}
+
+/* Ensure footer stays at bottom */
+:host {
+  @apply flex flex-col min-h-screen;
+}
+
+main {
+  @apply flex-grow;
+}
