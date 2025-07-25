@@ -5,6 +5,7 @@ import { News } from './pages/news/news';
 import { Events } from './pages/events/events';
 import { Community } from './pages/community/community';
 import { Settings } from './pages/settings/settings';
+import { Login } from './pages/login/login';
 
 export const routes: Routes = [
     {
@@ -36,6 +37,11 @@ export const routes: Routes = [
         path:'Settings',
         component: Settings,
         title: 'Settings',
+    },
+    {
+        path: 'login',
+        component: Login,
+        title: 'Login',
     }
 
 ];
