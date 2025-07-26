@@ -6,6 +6,8 @@ import { Events } from './pages/events/events';
 import { Community } from './pages/community/community';
 import { Settings } from './pages/settings/settings';
 import { Login } from './pages/login/login';
+import { Register } from './pages/register/register';
+import { Forgotpassword } from './pages/forgotpassword/forgotpassword';
 
 export const routes: Routes = [
     {
@@ -42,6 +44,16 @@ export const routes: Routes = [
         path: 'login',
         component: Login,
         title: 'Login',
+    },
+    {
+        path:'register',
+        component: Register,
+        title: 'Register',
+    },
+    {
+        path: 'forgot-password',
+        component: Forgotpassword,
+        title: 'Forgot Password',
     }
 
 ];
