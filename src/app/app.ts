@@ -3,11 +3,13 @@ import { NgIf } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Registeruser } from "./components/registeruser/registeruser";
 import { LoginPopup } from "./components/login-popup/login-popup";
+import { Toast } from "primeng/toast";
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Registeruser, LoginPopup],
+  imports: [RouterOutlet, Registeruser, LoginPopup, Toast],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
