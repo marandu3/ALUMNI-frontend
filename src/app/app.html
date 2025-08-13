@@ -12,8 +12,8 @@
         <a routerLink="/features" class="text-gray-600 hover:text-blue-600 transition hover:cursor-pointer ">Home</a>
         <a routerLink="/how-it-works" class="text-gray-600 hover:text-blue-600 transition hover:cursor-pointer ">How It Works</a>
         <a routerLink="/testimonials" class="text-gray-600 hover:text-blue-600 transition hover:cursor-pointer ">Testimonials</a>
-        <a routerLink="/login" class="text-gray-600 hover:text-blue-600 transition hover:cursor-pointer ">Login</a>
-        <a routerLink="/register" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition hover:cursor-pointer ">Register</a>
+        <a class="text-gray-600 hover:text-blue-600 transition hover:cursor-pointer " (click)="isLoginOpen = true">Login</a>
+        <a routerLink="/register" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition hover:cursor-pointer " (click)="openRegister()">Register</a>
       </div>
 
       <!-- Mobile menu button -->
@@ -33,15 +33,21 @@
       <a routerLink="/features" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Features</a>
       <a routerLink="/how-it-works" class="block px-3 py-2 text-gray-600 hover:text-blue-600">How It Works</a>
       <a routerLink="/testimonials" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Testimonials</a>
-      <a routerLink="/login" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Login</a>
+      <a class="block px-3 py-2 text-gray-600 hover:text-blue-600" (click)="isLoginOpen = true">Login</a>
       <a routerLink="/register" class="block px-3 py-2 text-blue-600 font-medium">Register</a>
     </div>
   </div>
 </nav>
 </div>
 
-
 <router-outlet></router-outlet>
 
+@if (isRegOpen) {
+  <app-registeruser (close)="isRegOpen = false"></app-registeruser>
+}
+
+@if (isLoginOpen) {
+  <app-login-popup (close)="isLoginOpen = false"></app-login-popup>
+}
 
 <footer></footer>
