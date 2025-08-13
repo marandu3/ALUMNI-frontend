@@ -2,3 +2,26 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Adjust the top value to match your navbar height */
+.p-toast {
+  top: 64px !important; /* Replace 64px with your navbar's height */
+  z-index: 9999; /* Ensure it's above page content but below navbar if needed */
+}
+
+/* Make all toast types greener and more visible on white backgrounds */
+.p-toast .p-toast-message {
+  background: #22c55e !important;   /* Bright green */
+  border-left: 6px solid #16a34a !important; /* Darker green accent */
+  color: #fff !important;           /* White text for contrast */
+}
+
+/* Optional: Make icons white for visibility */
+.p-toast .p-toast-message .p-toast-message-icon {
+  color: #fff !important;
+}
+
+/* Optional: Make close button white */
+.p-toast .p-toast-message .p-toast-icon-close {
+  color: #fff !important;
+}
