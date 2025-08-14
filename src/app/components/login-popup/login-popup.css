@@ -1,19 +1,102 @@
-.popup-overlay {
+
+.fixed {
   position: fixed;
   inset: 0;
   z-index: 50;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.5);
 }
-.popup-content {
-  background: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+.bg-white {
+  background: #fff;
+}
+.rounded-2xl {
+  border-radius: 1rem;
+}
+.shadow-lg {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+.p-8 {
   padding: 2rem;
-  min-width: 350px;
-  max-width: 400px;
-  width: 100%;
+}
+.relative {
   position: relative;
+}
+.max-w-md {
+  max-width: 400px;
+}
+.w-full {
+  width: 100%;
+}
+.absolute {
+  position: absolute;
+}
+.top-3 {
+  top: 0.75rem;
+}
+.right-3 {
+  right: 0.75rem;
+}
+.text-gray-400 {
+  color: #9ca3af;
+}
+.hover\:text-gray-600:hover {
+  color: #4b5563;
+}
+.text-2xl {
+  font-size: 1.5rem;
+}
+.font-bold {
+  font-weight: bold;
+}
+
+/* Sensational enhancements for login popup */
+.login-gradient {
+  background: linear-gradient(135deg, #4f8cff 0%, #6ee7b7 100%);
+}
+.login-card {
+  box-shadow: 0 12px 40px rgba(79,140,255,0.15), 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 1.5rem;
+  border: 1px solid #e0e7ff;
+  transition: box-shadow 0.3s;
+}
+.login-card:hover {
+  box-shadow: 0 20px 60px rgba(79,140,255,0.25), 0 4px 16px rgba(0,0,0,0.12);
+}
+.login-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #4f8cff, #6ee7b7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.login-input {
+  border: 2px solid #e0e7ff;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  transition: border-color 0.2s;
+}
+.login-input:focus {
+  border-color: #4f8cff;
+  outline: none;
+  box-shadow: 0 0 0 2px #4f8cff33;
+}
+.login-btn {
+  background: linear-gradient(90deg, #4f8cff, #6ee7b7);
+  color: #fff;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(79,140,255,0.12);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.login-btn:hover {
+  background: linear-gradient(90deg, #6ee7b7, #4f8cff);
+  box-shadow: 0 4px 16px rgba(79,140,255,0.18);
 }
