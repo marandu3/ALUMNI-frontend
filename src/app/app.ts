@@ -4,12 +4,13 @@ import { RouterOutlet } from '@angular/router';
 import { Registeruser } from "./components/registeruser/registeruser";
 import { LoginPopup } from "./components/login-popup/login-popup";
 import { Toast } from "primeng/toast";
+import { RouterLink } from "@angular/router";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Registeruser, LoginPopup, Toast],
+  imports: [RouterOutlet, Registeruser, LoginPopup, Toast, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

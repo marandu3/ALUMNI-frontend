@@ -9,19 +9,37 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   z-index: 9999; /* Ensure it's above page content but below navbar if needed */
 }
 
-/* Make all toast types greener and more visible on white backgrounds */
-.p-toast .p-toast-message {
-  background: #22c55e !important;   /* Bright green */
-  border-left: 6px solid #16a34a !important; /* Darker green accent */
-  color: #fff !important;           /* White text for contrast */
-}
-
-/* Optional: Make icons white for visibility */
-.p-toast .p-toast-message .p-toast-message-icon {
+/* Success toast */
+.p-toast .p-toast-message.p-toast-message-success {
+  background: #15803d !important;   /* Dark green */
+  border-left: 6px solid #166534 !important;
   color: #fff !important;
 }
 
-/* Optional: Make close button white */
+/* Info toast */
+.p-toast .p-toast-message.p-toast-message-info {
+  background: #1e3a8a !important;   /* Dark blue */
+  border-left: 6px solid #1e40af !important;
+  color: #fff !important;
+}
+
+/* Warning toast */
+.p-toast .p-toast-message.p-toast-message-warn {
+  background: #92400e !important;   /* Dark orange */
+  border-left: 6px solid #78350f !important;
+  color: #fff !important;
+}
+
+/* Error toast */
+.p-toast .p-toast-message.p-toast-message-error {
+  background: #7f1d1d !important;   /* Dark red */
+  border-left: 6px solid #991b1b !important;
+  color: #fff !important;
+}
+
+/* Make icons & close button white for all */
+.p-toast .p-toast-message .p-toast-message-icon,
 .p-toast .p-toast-message .p-toast-icon-close {
   color: #fff !important;
 }
+

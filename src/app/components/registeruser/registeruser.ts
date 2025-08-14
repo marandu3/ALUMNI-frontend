@@ -1,7 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { UserService } from '../../services/user';
-import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 
 @Component({
@@ -32,9 +31,12 @@ export class Registeruser {
   }
 
   onRegister() {
+    if (!this.formData.username || !this.formData.email || !this.formData.full_name || !this.formData.graduatedyear || !this.formData.phone || !this.formData.hashed_password) {
+      this.messageService.add({severity:'info', summary: 'Warning', detail: 'Please fill all fields!'});
+      return;
+    }
     this.userService.registerUser(this.formData).subscribe({
       next: (res: any) => {
-        alert('User registered successfully!');
         //redirecting to login pop overlay
         this.onClose();
         this.messageService.add({severity:'success', summary: 'Success', detail: 'User registered successfully!'});
@@ -44,7 +46,7 @@ export class Registeruser {
       },
       error: (err: any) => {
         console.error(err);
-        alert('Registration failed!');
+        this.messageService.add({severity:'error', summary: 'Error', detail: 'Registration failed! Check your Credentials.'});
       }
     });
   }
