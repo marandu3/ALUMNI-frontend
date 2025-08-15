@@ -1,0 +1,9 @@
+<ng-container *ngIf="tokenExists(); else notAuth">
+  <p>dashboard works!</p>
+  <button (click)="cleantoken()">Clear Local Storage</button>
+</ng-container>
+<ng-template #notAuth>
+  <div class="text-center text-red-600 font-bold mt-10">
+    You are not authorized. Please login to access the dashboard.
+  </div>
+</ng-template>
