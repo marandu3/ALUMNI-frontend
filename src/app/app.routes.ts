@@ -12,10 +12,6 @@ export const routes: Routes = [
         component: Home
     },
     {
-        path: '**',
-        redirectTo: ''
-    },
-    {
         path: 'about',
         component:About
     },
@@ -30,6 +26,10 @@ export const routes: Routes = [
     {
         path: 'signup',
         component: Signup
+    },
+    {
+        path: '**',
+        redirectTo: ''
     }
 ];
 

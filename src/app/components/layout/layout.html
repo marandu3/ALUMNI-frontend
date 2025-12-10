@@ -1,13 +1,98 @@
-<nav class="flex justify-between items-center p-4">
-    <div>
-        ALUMNI CONNECT
+<nav class="w-full shadow-md fixed top-0 left-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+
+    <!-- Logo -->
+    <div class="text-2xl font-bold tracking-wide">
+      ALUMNI CONNECT
     </div>
-    <div class="flex gap-15">
-        <a routerLink="">Home</a>
-        <a routerLink="about">About</a>
-        <a routerLink="contact">Contact</a>
-        <a routerLink="login">Login</a>
-        <a routerLink="signup">Sign Up</a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-8 text-lg font-medium">
+      <a routerLink="/" 
+         routerLinkActive="text-blue-600 font-semibold border-b-2 border-blue-600"
+         [routerLinkActiveOptions]="{ exact: true }"
+         class="hover:text-blue-600 transition">
+         Home
+      </a>
+
+      <a routerLink="/about"
+         routerLinkActive="text-blue-600 font-semibold border-b-2 border-blue-600"
+         class="hover:text-blue-600 transition">
+         About
+      </a>
+
+      <a routerLink="/contact"
+         routerLinkActive="text-blue-600 font-semibold border-b-2 border-blue-600"
+         class="hover:text-blue-600 transition">
+         Contact
+      </a>
+
+      <a routerLink="/login"
+         routerLinkActive="text-blue-600 font-semibold border-b-2 border-blue-600"
+         class="hover:text-blue-600 transition">
+         Login
+      </a>
+
+      <a routerLink="/signup"
+         routerLinkActive="text-blue-600 font-semibold border-b-2 border-blue-600"
+         class="hover:text-blue-600 transition">
+         Sign Up
+      </a>
     </div>
-    
+
+    <!-- Hamburger Icon -->
+    <button class="md:hidden focus:outline-none" (click)="toggleMenu()">
+      <svg *ngIf="!menuOpen" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+
+      <svg *ngIf="menuOpen" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div *ngIf="menuOpen" class="md:hidden bg-white border-t shadow-md">
+    <a routerLink="/" 
+       routerLinkActive="bg-blue-50 text-blue-600 font-semibold"
+       [routerLinkActiveOptions]="{ exact: true }"
+       (click)="closeMenu()"
+       class="block px-4 py-3 border-b text-gray-700 hover:bg-gray-100 transition">
+       Home
+    </a>
+
+    <a routerLink="/about" 
+       routerLinkActive="bg-blue-50 text-blue-600 font-semibold"
+       (click)="closeMenu()"
+       class="block px-4 py-3 border-b text-gray-700 hover:bg-gray-100 transition">
+       About
+    </a>
+
+    <a routerLink="/contact" 
+       routerLinkActive="bg-blue-50 text-blue-600 font-semibold"
+       (click)="closeMenu()"
+       class="block px-4 py-3 border-b text-gray-700 hover:bg-gray-100 transition">
+       Contact
+    </a>
+
+    <a routerLink="/login" 
+       routerLinkActive="bg-blue-50 text-blue-600 font-semibold"
+       (click)="closeMenu()"
+       class="block px-4 py-3 border-b text-gray-700 hover:bg-gray-100 transition">
+       Login
+    </a>
+
+    <a routerLink="/signup" 
+       routerLinkActive="bg-blue-50 text-blue-600 font-semibold"
+       (click)="closeMenu()"
+       class="block px-4 py-3 border-b text-gray-700 hover:bg-gray-100 transition">
+       Sign Up
+    </a>
+  </div>
 </nav>
