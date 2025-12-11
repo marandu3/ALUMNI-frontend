@@ -1,0 +1,76 @@
+/* Prevent image from touching navbar */
+.auth-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-box {
+  display: flex;
+  width: 90%;
+  height: 85vh;
+  
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* IMAGE SIDE */
+.image-side {
+  width: 50%;
+  position: relative;
+}
+
+.side-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 30px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  backdrop-filter: blur(4px);
+}
+
+.overlay button {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* FORM SIDE */
+.form-side {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-box input {
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+.primary-btn {
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}

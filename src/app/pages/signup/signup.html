@@ -1,1 +1,29 @@
-<p>signup works!</p>
+<div class="auth-container">
+  <div class="auth-box border-2 border-blue-950" id="authWrapper">
+
+    <!-- LEFT IMAGE -->
+    <div class="image-side">
+      <img src="graduant.jpg" class="side-img" />
+
+      <div class="overlay">
+        <h2>Start your journey today!</h2>
+        <p>Join a community that pushes each other to grow.</p>
+        <p>Already have an account?   <button class="bg-blue-900 p-2 rounded-md hover:cursor-pointer" (click)="goLogin()">Sign In</button></p>
+   
+      </div>
+    </div>
+
+    <!-- SIGN UP FORM -->
+    <div class="form-side">
+      <form class="form-box">
+        <h1 class="text-3xl">Create Account</h1>
+
+        <input type="text" placeholder="Username" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+
+        <button class="primary-btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>

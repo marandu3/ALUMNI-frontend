@@ -1,21 +1,81 @@
-<div class="w-full flex flex-col items-center  p-6">
-    <!-- Full-width image -->
-    <img src="image.png" 
-        alt="Home Illustration" class="w-full max-h-96 object-cover rounded-lg shadow-lg" />
+<div class="relative w-full h-[90vh] overflow-hidden">
+    <!-- Full background image -->
+    <img src="peple.jpg" 
+         alt="Home Illustration"
+         class="absolute inset-0 w-full h-full object-cover" />
 
-    <!-- Welcome Text -->
-    <div class="mt-6 text-center">
-        <h1 class="text-4xl font-bold text-gray-50">Welcome to Our Platform!</h1>
-        <p class="mt-4 text-gray-200 text-lg">
-            Discover new opportunities, connect with amazing people, and take your skills to the next level.
-        </p>
+    <!-- Overlay with blur -->
+    <div class="absolute bottom-0 left-0 w-full p-6 bg-black/40 backdrop-blur-md">
+        <div class="text-center text-white">
+            <h1 class="text-4xl font-bold">Welcome to Our Platform!</h1>
+            <p class="mt-4 text-lg">
+                Discover new opportunities, connect with amazing people, and take your 
+                skills to the next level.
+            </p>
+
+            <div class="mt-6 flex justify-center gap-4">
+                <button class="rounded bg-blue-600 px-6 py-3 hover:bg-blue-700"
+                    (click)="navigateToFeatures('login')">Login</button>
+
+                <button class="rounded bg-green-600 px-6 py-3 hover:bg-green-700"
+                    (click)="navigateToFeatures('signup')">Sign Up</button>
+            </div>
+        </div>
     </div>
+</div>
 
-    <!-- Buttons -->
-    <div class="mt-6 flex gap-4">
-        <button class="rounded bg-blue-600 px-6 py-3 text-white hover:bg-blue-700"
-            (click)="navigateToFeatures('login')">Login</button>
-        <button class="rounded bg-green-600 px-6 py-3 text-white hover:bg-green-700"
-            (click)="navigateToFeatures('signup')">Sign Up</button>
+<!-- CARDS SECTION -->
+<div class="w-full py-12 px-6 ">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1 - Blue -->
+        <div class="p-6 rounded-xl shadow-md bg-blue-600 text-white transition transform hover:-translate-y-2 hover:cursor-pointer hover:shadow-xl hover:scale-[1.02]">
+            <h3 class="text-xl font-bold mb-2">Networking Opportunities</h3>
+            <p class="opacity-90">
+                Connect with alumni across different years and fields, opening doors to new friendships,
+                mentorships, and professional relationships.
+            </p>
+        </div>
+
+        <!-- Card 2 - Green -->
+        <div class="p-6 rounded-xl shadow-md bg-green-600 text-white transition transform hover:-translate-y-2 hover:cursor-pointer hover:shadow-xl hover:scale-[1.02]">
+            <h3 class="text-xl font-bold mb-2">Career Growth</h3>
+            <p class="opacity-90">
+                Access job postings, industry insights, and career guidance shared by experienced alumni in top positions.
+            </p>
+        </div>
+
+        <!-- Card 3 - Purple -->
+        <div class="p-6 rounded-xl shadow-md bg-purple-600 text-white transition transform hover:-translate-y-2 hover:cursor-pointer hover:shadow-xl hover:scale-[1.02]">
+            <h3 class="text-xl font-bold mb-2">Mentorship Programs</h3>
+            <p class="opacity-90">
+                Get paired with mentors who help you navigate academics, career choices, and personal development.
+            </p>
+        </div>
+
+        <!-- Card 4 - Blue -->
+        <div class="p-6 rounded-xl shadow-md bg-blue-600 text-white transition transform hover:-translate-y-2 hover:cursor-pointer hover:shadow-xl hover:scale-[1.02]">
+            <h3 class="text-xl font-bold mb-2">Exclusive Events</h3>
+            <p class="opacity-90">
+                Attend alumni meetups, workshops, bootcamps, and reunions designed to keep you informed and connected.
+            </p>
+        </div>
+
+        <!-- Card 5 - Green -->
+        <div class="p-6 rounded-xl shadow-md bg-green-600 text-white transition transform hover:-translate-y-2 hover:cursor-pointer hover:shadow-xl hover:scale-[1.02]">
+            <h3 class="text-xl font-bold mb-2">Resource Sharing</h3>
+            <p class="opacity-90">
+                Access shared materials, project ideas, internship tips, and academic support from senior graduates.
+            </p>
+        </div>
+
+        <!-- Card 6 - Purple -->
+        <div class="p-6 rounded-xl shadow-md bg-purple-600 text-white transition transform hover:-translate-y-2 hover:cursor-pointer hover:shadow-xl hover:scale-[1.02]">
+            <h3 class="text-xl font-bold mb-2">Industry Exposure</h3>
+            <p class="opacity-90">
+                Gain insights into real-world industry practices through alumni who work in leading companies and startups.
+            </p>
+        </div>
+
     </div>
 </div>

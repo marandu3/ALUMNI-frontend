@@ -1,1 +1,29 @@
-<p>login works!</p>
+<div class="auth-container ">
+  <div class="auth-box border-2 border-blue-950">
+
+    <!-- LOGIN FORM -->
+    <div class="form-side flex flex-col gap-8">
+      <form class="form-box">
+        <h1 class="text-3xl">Welcome Back</h1>
+
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+
+        <button class="login-btn hover:cursor-pointer">Log In</button>
+      </form>
+
+      <p>Don't have an account? <button class="bg-blue-900 p-2 rounded-md hover:cursor-pointer" (click)="goSignup()">Sign Up</button></p>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="image-side">
+      <img src="graduant.jpg" class="side-img" />
+
+      <div class="overlay">
+        <h2>Welcome back!</h2>
+        <p>Let’s continue your progress.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
