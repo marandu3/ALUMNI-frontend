@@ -4,7 +4,8 @@ import { Layout } from "./components/layout/layout";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Layout],
+  imports: [RouterOutlet, Layout,],
+  standalone: true,
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
