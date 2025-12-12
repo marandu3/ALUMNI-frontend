@@ -51,20 +51,17 @@ export class Signup {
     this.signupService.registerUser(this.signupForm.value).subscribe({
       next: (response) => {
         this.isSubmitting = false; // stop loader
-        this.messageService.add({
-          severity: 'success',
-          summary: 'Success',
-          detail: 'Account created successfully! Redirecting to login...'
-        });
+        this.messageService.add({ severity: 'success', summary: 'success', detail: 'User created successfully', life: 3000 });
         setTimeout(() => this.router.navigate(['/login']), 2000);
       },
       error: (err) => {
         this.isSubmitting = false; // stop loader
-        const errorMessage = err?.error?.message || 'Failed to create account. Please try again.';
-        this.messageService.add({
-          severity: 'error',
-          summary: 'Registration Failed',
-          detail: errorMessage
+        const errorMessage = err?.error?.message || err?.error?.detail || 'Failed to create account. Please try again.';
+        this.messageService.add({ 
+          severity: 'error', 
+          summary: 'Registration Failed', 
+          detail: errorMessage, 
+          life: 3000 
         });
       }
     });
